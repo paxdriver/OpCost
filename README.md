@@ -44,6 +44,7 @@ Where:
 ## 2. Displaced Priority Value
 
 Every contract currently on the floor holds an implicit "holding cost value" based on its base margin ($P_{\text{base}}$) scaled by its current urgency metric:
+
 $$
 \text{Priority Value} = P_{\text{base}} \cdot U(t)
 $$ 
@@ -52,9 +53,7 @@ $$
 
 The minimum viable quote ($\text{Quote}_{\text{new}}$) for an incoming contract is calculated by aggregating its desired profit base with the total economic friction it causes across your entire operation:
 
-$$
-\text{Quote}_{\text{new}} = P_{\text{new\_base}} + \sum (\text{Displaced Priority Values}) + \sum (\text{Triggered Setup Costs})
-$$ 
+$$ \text{Quote}_{\text{new}} = P_{\text{new}\_\text{base}} + \sum (\text{Displaced Priority Values}) + \sum (\text{Triggered Setup Costs}) $$
 
 * Displaced Priority Values: Activated only if inserting the new job forces an existing baseline contract to miss its delivery date.
 * Triggered Setup Costs: Assessed every time a machine must switch between different contract specifications ($C_{\text{setup}}$).
@@ -100,8 +99,8 @@ Make sure you have Python 3.8+ installed on your system.
 
 ## 1. Clone the Repository
 
-git clone https://github.com
-cd OpCost-Dashboard
+git clone https://github.com/paxdriver/OpCost
+cd OpCost
 
 ## 2. Set Up a Virtual Environment (Recommended)
 This keeps your global python packages isolated and clean.
