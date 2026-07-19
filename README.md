@@ -8,6 +8,12 @@ By modeling contract-splitting pipelines and time-dependent deadline penalties, 
 
 ---
 
+![Screenshot 1](screenshot-1.png)
+![Screenshot 2](screenshot-2.png)
+![Screenshot 3](screenshot-3.png)
+
+---
+
 ## i. Key Architectural Features
 
 * Preemptive Task Routing: Treats contracts as decoupled manufacturing steps. For instance, a part can undergo CNC processing and wait in queue for bending without locking up both machines simultaneously.
